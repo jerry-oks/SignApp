@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3B0590CF2AA133C60063A4C3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0590CE2AA133C60063A4C3 /* User.swift */; };
+		3B0590D32AA137690063A4C3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0590D22AA137690063A4C3 /* User.swift */; };
 		3BD775902AA0FE0300A9F684 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD7758F2AA0FE0300A9F684 /* AppDelegate.swift */; };
 		3BD775922AA0FE0300A9F684 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD775912AA0FE0300A9F684 /* SceneDelegate.swift */; };
 		3BD775942AA0FE0300A9F684 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD775932AA0FE0300A9F684 /* MainViewController.swift */; };
@@ -30,7 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3B0590CE2AA133C60063A4C3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = User.swift; path = ../../../User.swift; sourceTree = "<group>"; };
+		3B0590D22AA137690063A4C3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		3BD7758C2AA0FE0300A9F684 /* SignApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SignApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BD7758F2AA0FE0300A9F684 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BD775912AA0FE0300A9F684 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,10 +65,10 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3B0590CD2AA133B40063A4C3 /* Models */ = {
+		3B0590D12AA1375A0063A4C3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				3B0590CE2AA133C60063A4C3 /* User.swift */,
+				3B0590D22AA137690063A4C3 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -92,8 +92,8 @@
 		3BD7758E2AA0FE0300A9F684 /* SignApp */ = {
 			isa = PBXGroup;
 			children = (
-				3B0590CD2AA133B40063A4C3 /* Models */,
 				3BD775A32AA0FE0C00A9F684 /* App */,
+				3B0590D12AA1375A0063A4C3 /* Models */,
 				3BD775A42AA0FE1400A9F684 /* View Controllers */,
 				3BD775A52AA0FE2400A9F684 /* Storyboards */,
 				3BD775982AA0FE0400A9F684 /* Assets.xcassets */,
@@ -219,7 +219,7 @@
 				3BD775AC2AA126EF00A9F684 /* DOBViewController.swift in Sources */,
 				3BD775BC2AA1284600A9F684 /* MainNavigationController.swift in Sources */,
 				3BD775B62AA1276B00A9F684 /* ProfilePicEditViewController.swift in Sources */,
-				3B0590CF2AA133C60063A4C3 /* User.swift in Sources */,
+				3B0590D32AA137690063A4C3 /* User.swift in Sources */,
 				3BD775902AA0FE0300A9F684 /* AppDelegate.swift in Sources */,
 				3BD775B82AA1277900A9F684 /* AboutViewController.swift in Sources */,
 				3BD775BA2AA127AC00A9F684 /* SMSCodeViewController.swift in Sources */,
