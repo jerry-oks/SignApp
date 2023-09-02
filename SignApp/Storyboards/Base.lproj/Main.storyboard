@@ -147,6 +147,7 @@
                         <barButtonItem key="backBarButtonItem" title="Номер телефона" id="5mH-07-7E3"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="phoneNumberTF" destination="1fv-de-3Lf" id="ldC-33-ocN"/>
                         <segue destination="4US-fw-4dP" kind="show" identifier="fullnameVC" id="OZt-5r-fid"/>
                     </connections>
                 </viewController>
@@ -204,6 +205,9 @@
                                 <rect key="frame" x="123" y="313" width="74" height="34.5"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Далее"/>
+                                <connections>
+                                    <action selector="doneButtonPressed" destination="lif-wW-ORa" eventType="touchUpInside" id="FHF-Pe-ey2"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Код из СМС" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xvg-3W-cQf">
                                 <rect key="frame" x="16" y="20" width="288" height="41"/>
@@ -237,6 +241,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Код из СМС" id="nvE-dM-S6i"/>
+                    <connections>
+                        <outlet property="codeTF" destination="9fP-6C-odF" id="yaE-75-2rM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U4V-nH-2Fs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -689,6 +696,9 @@
                                         <color key="tintColor" systemColor="systemRedColor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Выход"/>
+                                        <connections>
+                                            <action selector="exitButtonPressed:" destination="7OI-fj-mB2" eventType="touchUpInside" id="YI6-8m-8Z1"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>

@@ -7,23 +7,30 @@
 
 import UIKit
 
-class PhoneViewController: UIViewController {
+protocol SMSCodeViewControllerDelegate: AnyObject {
+    func verify()
+}
 
+final class PhoneViewController: UIViewController {
+    
+    @IBOutlet var phoneNumberTF: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        guard let smscodeVC = segue.destination as? SMSCodeViewController else { return }
+        smscodeVC.delegate = self
+        smscodeVC.phoneNumber = phoneNumberTF.text
     }
-    */
+    
+}
 
+// MARK: - SMSCodeViewControllerDelegate
+extension PhoneViewController: SMSCodeViewControllerDelegate {
+    func verify() {
+        DataStore.shared.user.phone = phoneNumberTF.text ?? ""
+        performSegue(withIdentifier: "fullnameVC", sender: self)
+    }
 }
