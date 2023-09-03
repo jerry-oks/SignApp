@@ -22,22 +22,21 @@ final class PhoneViewController: UIViewController {
         view.endEditing(true)
     }
     
-    @IBAction func numberBlockTFChanged(_ sender: UITextField) {
+    @IBAction private func numberBlockTFChanged(_ sender: UITextField) {
         if isValid(sender) {
             guard let indexOfTF = numberBlocks.firstIndex(of: sender) else { return }
             
             if numberBlocks.last == sender {
                 sender.resignFirstResponder()
-                return
+            } else {
+                numberBlocks[indexOfTF + 1].becomeFirstResponder()
             }
-            
-            numberBlocks[indexOfTF + 1].becomeFirstResponder()
         }
         
         nextButton.isEnabled = shouldEnableButton()
     }
     
-    @IBAction func numberBlockTFEdited(_ sender: UITextField) {
+    @IBAction private func numberBlockTFEdited(_ sender: UITextField) {
         let color = isValid(sender)
         ? UIColor.clear.cgColor
         : CGColor(
