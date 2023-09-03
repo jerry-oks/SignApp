@@ -27,6 +27,7 @@
 		3BD775BC2AA1284600A9F684 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD775BB2AA1284600A9F684 /* MainNavigationController.swift */; };
 		3BD775BE2AA1285D00A9F684 /* SettingsNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD775BD2AA1285D00A9F684 /* SettingsNavigationController.swift */; };
 		3BD775C02AA1287300A9F684 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD775BF2AA1287300A9F684 /* TabBarController.swift */; };
+		D5E562A42AA4D41C0004B890 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E562A32AA4D41C0004B890 /* DataStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		3BD775BB2AA1284600A9F684 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		3BD775BD2AA1285D00A9F684 /* SettingsNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsNavigationController.swift; sourceTree = "<group>"; };
 		3BD775BF2AA1287300A9F684 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		D5E562A32AA4D41C0004B890 /* DataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 		3BD7758E2AA0FE0300A9F684 /* SignApp */ = {
 			isa = PBXGroup;
 			children = (
+				D5E562A22AA4D41C0004B890 /* Services */,
 				3BD775A32AA0FE0C00A9F684 /* App */,
 				3B0590D12AA1375A0063A4C3 /* Models */,
 				3BD775A42AA0FE1400A9F684 /* View Controllers */,
@@ -139,6 +142,14 @@
 				3BD7759A2AA0FE0400A9F684 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		D5E562A22AA4D41C0004B890 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D5E562A32AA4D41C0004B890 /* DataStore.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,6 +230,7 @@
 				3BD775AC2AA126EF00A9F684 /* DOBViewController.swift in Sources */,
 				3BD775BC2AA1284600A9F684 /* MainNavigationController.swift in Sources */,
 				3BD775B62AA1276B00A9F684 /* ProfilePicEditViewController.swift in Sources */,
+				D5E562A42AA4D41C0004B890 /* DataStore.swift in Sources */,
 				3B0590D32AA137690063A4C3 /* User.swift in Sources */,
 				3BD775902AA0FE0300A9F684 /* AppDelegate.swift in Sources */,
 				3BD775B82AA1277900A9F684 /* AboutViewController.swift in Sources */,
