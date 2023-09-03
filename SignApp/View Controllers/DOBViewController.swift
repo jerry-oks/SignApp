@@ -8,22 +8,20 @@
 import UIKit
 
 class DOBViewController: UIViewController {
+    
+    @IBOutlet var dateOfBirth: UIDatePicker!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        dateOfBirth.date = User().dateOfBirth
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+      let profileVC = segue.destination as? ProfileViewController
+        profileVC?.profileDateOfBirth = dateOfBirth.description
     }
-    */
+    
 
 }

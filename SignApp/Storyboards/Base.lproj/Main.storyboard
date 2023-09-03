@@ -310,6 +310,10 @@
                     <navigationItem key="navigationItem" title="Имя и фамилия" id="sNO-oU-HC8">
                         <barButtonItem key="backBarButtonItem" title="Имя и фамилия" id="wfg-2j-Lx2"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="UserName" destination="D4R-1m-eMS" id="Z6f-Js-Rj1"/>
+                        <outlet property="UserSurname" destination="36e-lU-9t3" id="jWm-Ys-fGJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ALv-G3-1Sl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -356,6 +360,9 @@
                     <navigationItem key="navigationItem" title="Дата рождения" id="ldq-o3-gyf">
                         <barButtonItem key="backBarButtonItem" title="Дата рождения" id="l0o-fk-oce"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="dateOfBirth" destination="tHa-qT-cIt" id="O5H-DM-4yI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jW6-u2-Whk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -634,6 +641,10 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Профиль" image="person.fill" catalog="system" id="TsB-UP-dN9"/>
                     <navigationItem key="navigationItem" title="Привет!" id="9Ey-iw-Vlp"/>
+                    <connections>
+                        <outlet property="userDateOfBirth" destination="obw-fI-oBh" id="er5-E2-AdJ"/>
+                        <outlet property="userFullName" destination="bHA-Qo-wOP" id="4ND-Y0-Ssd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mAH-bs-lcU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

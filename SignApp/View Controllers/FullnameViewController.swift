@@ -8,22 +8,23 @@
 import UIKit
 
 class FullnameViewController: UIViewController {
-
+    
+    @IBOutlet var UserName: UITextField!
+    @IBOutlet var UserSurname: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        UserName.text = User().name
+        UserSurname.text = User().surname
+        
+        }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+      let profileVC = segue.destination as? ProfileViewController
+      profileVC?.profileUserFullName = (UserName.text ?? "") + (UserSurname.text ?? "")
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
+
+
