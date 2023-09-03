@@ -8,7 +8,8 @@
 import Foundation
 
 struct User {
-    var phone = ""
+    var phone = PhoneNumber()
+    var isValidated = false
     var name = ""
     var surname = ""
     var dateOfBirth = Date()
@@ -19,3 +20,23 @@ struct User {
         "\(name) \(surname)"
     }
 }
+
+struct PhoneNumber {
+    var firstBlock = ""
+    var secondBlock = ""
+    var thirdBlock = ""
+    var fourthBlock = ""
+    
+    var full: String {
+        var formatted: String {
+            "+7 (\(firstBlock)) \(secondBlock)-\(thirdBlock)-\(fourthBlock)"
+        }
+        
+        return firstBlock + secondBlock + thirdBlock + fourthBlock
+    }
+    
+    func formatted() -> String {
+        "+7 (\(firstBlock)) \(secondBlock)-\(thirdBlock)-\(fourthBlock)"
+    }
+}
+
