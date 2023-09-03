@@ -183,45 +183,63 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="Jgu-yl-PZH">
-                                <rect key="frame" x="16" y="261.5" width="288" height="45.5"/>
+                                <rect key="frame" x="16" y="241.5" width="288" height="45.5"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="●" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9fP-6C-odF">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="●" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9fP-6C-odF">
                                         <rect key="frame" x="0.0" y="0.0" width="45.5" height="45.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="9fP-6C-odF" secondAttribute="height" multiplier="1:1" id="cqe-nZ-xDg"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                        <connections>
+                                            <action selector="digitBlockChanged:" destination="lif-wW-ORa" eventType="editingChanged" id="I8F-oQ-sFa"/>
+                                        </connections>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="●" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eTr-yI-DHp">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="●" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eTr-yI-DHp">
                                         <rect key="frame" x="48.5" y="0.0" width="45.5" height="45.5"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                        <connections>
+                                            <action selector="digitBlockChanged:" destination="lif-wW-ORa" eventType="editingChanged" id="z9R-Td-BEq"/>
+                                        </connections>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="●" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F9i-kV-dix">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="●" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F9i-kV-dix">
                                         <rect key="frame" x="97" y="0.0" width="45.5" height="45.5"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                        <connections>
+                                            <action selector="digitBlockChanged:" destination="lif-wW-ORa" eventType="editingChanged" id="Se4-Ru-ZhQ"/>
+                                        </connections>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="●" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TIT-g9-fUv">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="●" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TIT-g9-fUv">
                                         <rect key="frame" x="145.5" y="0.0" width="45.5" height="45.5"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                        <connections>
+                                            <action selector="digitBlockChanged:" destination="lif-wW-ORa" eventType="editingChanged" id="ng7-Vm-hPi"/>
+                                        </connections>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="●" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uXi-bB-sbk">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="●" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uXi-bB-sbk">
                                         <rect key="frame" x="194" y="0.0" width="45.5" height="45.5"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                        <connections>
+                                            <action selector="digitBlockChanged:" destination="lif-wW-ORa" eventType="editingChanged" id="anJ-js-8D7"/>
+                                        </connections>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="●" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e4E-Qw-AuR">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="●" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e4E-Qw-AuR">
                                         <rect key="frame" x="242.5" y="0.0" width="45.5" height="45.5"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                        <connections>
+                                            <action selector="digitBlockChanged:" destination="lif-wW-ORa" eventType="editingChanged" id="crV-gC-flX"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nwe-nb-QlH">
-                                <rect key="frame" x="123" y="323" width="74" height="34.5"/>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nwe-nb-QlH">
+                                <rect key="frame" x="123" y="303" width="74" height="34.5"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Далее"/>
                             </button>
@@ -231,9 +249,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="123456" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eTG-ng-nPv">
-                                <rect key="frame" x="128.5" y="225" width="63" height="20.5"/>
-                                <color key="backgroundColor" systemColor="separatorColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="123456" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eTG-ng-nPv">
+                                <rect key="frame" x="128.5" y="205" width="63" height="20.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -247,7 +264,7 @@
                             <constraint firstAttribute="trailing" secondItem="Jgu-yl-PZH" secondAttribute="trailing" constant="16" id="3PA-g0-95G"/>
                             <constraint firstItem="nwe-nb-QlH" firstAttribute="centerX" secondItem="OBG-Il-N9F" secondAttribute="centerX" id="D4t-Dn-dao"/>
                             <constraint firstItem="eTG-ng-nPv" firstAttribute="centerX" secondItem="OBG-Il-N9F" secondAttribute="centerX" id="HDQ-kY-bxa"/>
-                            <constraint firstItem="Jgu-yl-PZH" firstAttribute="centerY" secondItem="OBG-Il-N9F" secondAttribute="centerY" id="Qdg-hZ-9Gj"/>
+                            <constraint firstItem="Jgu-yl-PZH" firstAttribute="centerY" secondItem="OBG-Il-N9F" secondAttribute="centerY" constant="-20" id="Qdg-hZ-9Gj"/>
                             <constraint firstItem="Jgu-yl-PZH" firstAttribute="top" secondItem="eTG-ng-nPv" secondAttribute="bottom" constant="16" id="RNb-a7-GPa"/>
                             <constraint firstItem="eTG-ng-nPv" firstAttribute="centerX" secondItem="OBG-Il-N9F" secondAttribute="centerX" id="TeE-RO-PNJ"/>
                             <constraint firstItem="Qbe-Ua-hrr" firstAttribute="trailing" secondItem="Xvg-3W-cQf" secondAttribute="trailing" constant="16" id="ZhK-Vr-Mbi"/>
@@ -257,6 +274,16 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Код из СМС" id="nvE-dM-S6i"/>
+                    <connections>
+                        <outlet property="codeLabel" destination="eTG-ng-nPv" id="FlL-zd-Jao"/>
+                        <outlet property="nextButton" destination="nwe-nb-QlH" id="QO1-36-biF"/>
+                        <outletCollection property="digitBlocks" destination="9fP-6C-odF" collectionClass="NSMutableArray" id="ajV-LB-x8M"/>
+                        <outletCollection property="digitBlocks" destination="eTr-yI-DHp" collectionClass="NSMutableArray" id="w1H-AQ-0u4"/>
+                        <outletCollection property="digitBlocks" destination="F9i-kV-dix" collectionClass="NSMutableArray" id="66E-XN-3Wd"/>
+                        <outletCollection property="digitBlocks" destination="TIT-g9-fUv" collectionClass="NSMutableArray" id="5q7-22-IGh"/>
+                        <outletCollection property="digitBlocks" destination="uXi-bB-sbk" collectionClass="NSMutableArray" id="JJx-pv-02z"/>
+                        <outletCollection property="digitBlocks" destination="e4E-Qw-AuR" collectionClass="NSMutableArray" id="zig-Ne-NCa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U4V-nH-2Fs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -307,7 +334,7 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8iZ-SZ-C73">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8iZ-SZ-C73">
                                 <rect key="frame" x="123" y="374" width="74" height="34.5"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Далее"/>
@@ -330,6 +357,11 @@
                     <navigationItem key="navigationItem" title="Имя и фамилия" id="sNO-oU-HC8">
                         <barButtonItem key="backBarButtonItem" title="Имя и фамилия" id="wfg-2j-Lx2"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="nextButton" destination="8iZ-SZ-C73" id="ISA-gr-38V"/>
+                        <outletCollection property="textfields" destination="D4R-1m-eMS" collectionClass="NSMutableArray" id="R1H-QX-HhP"/>
+                        <outletCollection property="textfields" destination="36e-lU-9t3" collectionClass="NSMutableArray" id="uGO-iA-2mt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ALv-G3-1Sl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
