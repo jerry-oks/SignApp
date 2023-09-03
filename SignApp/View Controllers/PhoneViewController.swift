@@ -7,10 +7,16 @@
 
 import UIKit
 
+protocol SMSCodeViewControllerDelegate: AnyObject {
+    func goNext()
+}
+
 final class PhoneViewController: UIViewController {
     
     @IBOutlet private var numberBlockTFs: [UITextField]!
     @IBOutlet private var nextButton: UIButton!
+    
+    var user = User()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +26,15 @@ final class PhoneViewController: UIViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let smsCodeVC = segue.destination as? SMSCodeViewController {
+            smsCodeVC.user = user
+            smsCodeVC.delegate = self
+        } else if let fullnameVC = segue.destination as? FullnameViewController {
+            fullnameVC.user = user
+        }
     }
     
     @IBAction private func numberBlockTFChanged(_ sender: UITextField) {
@@ -51,6 +66,13 @@ final class PhoneViewController: UIViewController {
         nextButton.isEnabled = shouldEnableButton()
     }
     
+    @IBAction func nextButtonTapped() {
+        user.phone.firstBlock = numberBlockTFs[0].text ?? ""
+        user.phone.secondBlock = numberBlockTFs[1].text ?? ""
+        user.phone.thirdBlock = numberBlockTFs[2].text ?? ""
+        user.phone.fourthBlock = numberBlockTFs[3].text ?? ""
+        print(user)
+    }
     
 }
 
@@ -86,5 +108,11 @@ private extension PhoneViewController {
     
     func shouldEnableButton() -> Bool {
         isValid(numberBlockTFs)
+    }
+}
+
+extension PhoneViewController: SMSCodeViewControllerDelegate {
+    func goNext() {
+        performSegue(withIdentifier: "openFullnameVC", sender: nil)
     }
 }

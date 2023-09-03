@@ -12,6 +12,10 @@ final class SMSCodeViewController: UIViewController {
     @IBOutlet private var nextButton: UIButton!
     @IBOutlet private var codeLabel: UILabel!
     
+    var user = User()
+    
+    unowned var delegate: SMSCodeViewControllerDelegate!
+    
     private let code = Int.random(in: 100000...999999)
     
     override func viewDidLoad() {
@@ -50,6 +54,41 @@ final class SMSCodeViewController: UIViewController {
         }
         
         nextButton.isEnabled = shouldEnableButton(ifTFsAreValid: digitBlockTFs)
+    }
+    @IBAction func nextButtonTapped() {
+        var enteredCode = ""
+        digitBlockTFs.forEach { digitBlockTF in
+            enteredCode.append(digitBlockTF.text ?? "")
+        }
+        print(enteredCode)
+        print(code)
+        if Int(enteredCode) == code {
+            user.isValidated = true
+            dismiss(animated: true)
+            delegate?.goNext()
+        } else {
+            let alert = UIAlertController(
+                title: "Неверный код",
+                message: "Проверьте, что код введен верно, и повторите попытку",
+                preferredStyle: .alert
+            )
+            alert.addAction(
+                UIAlertAction(
+                    title: "OK",
+                    style: .default
+                ) { _ in
+                    self.digitBlockTFs.forEach { digitBlock in
+                        digitBlock.text = ""
+                    }
+                }
+            )
+            
+            present(alert, animated: true)
+        }
+    }
+    @IBAction func skipButtonTapped() {
+        user.isValidated = false
+        delegate?.goNext()
     }
 }
 

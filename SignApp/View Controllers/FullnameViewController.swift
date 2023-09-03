@@ -11,6 +11,8 @@ final class FullnameViewController: UIViewController {
     @IBOutlet private var textFields: [UITextField]!
     @IBOutlet private var nextButton: UIButton!
     
+    var user = User()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,6 +24,11 @@ final class FullnameViewController: UIViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let dobVC = segue.destination as? DOBViewController else { return }
+        dobVC.user = user
     }
     
     @IBAction private func tfChanged(_ sender: UITextField) {
@@ -43,6 +50,11 @@ final class FullnameViewController: UIViewController {
         nextButton.isEnabled = shouldEnableButton()
     }
     
+    @IBAction func nextButtonTapped() {
+        user.name = textFields.first?.text ?? ""
+        user.surname = textFields.last?.text ?? ""
+        print(user)
+    }
 }
 
 extension FullnameViewController: UITextFieldDelegate {
