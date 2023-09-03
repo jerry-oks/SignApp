@@ -8,7 +8,7 @@
 import UIKit
 
 final class SMSCodeViewController: UIViewController {
-    @IBOutlet private var digitBlocks: [UITextField]!
+    @IBOutlet private var digitBlockTFs: [UITextField]!
     @IBOutlet private var nextButton: UIButton!
     @IBOutlet private var codeLabel: UILabel!
     
@@ -19,7 +19,7 @@ final class SMSCodeViewController: UIViewController {
         
         codeLabel.text = "📩 Ваш код: \(code)"
         codeLabel.alpha = 0
-        digitBlocks.first?.becomeFirstResponder()
+        digitBlockTFs.first?.becomeFirstResponder()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -40,35 +40,35 @@ final class SMSCodeViewController: UIViewController {
     
     @IBAction private func digitBlockChanged(_ sender: UITextField) {
         if isValid(sender) {
-            guard let indexOfTF = digitBlocks.firstIndex(of: sender) else { return }
+            guard let indexOfTF = digitBlockTFs.firstIndex(of: sender) else { return }
             
-            if digitBlocks.last == sender {
+            if digitBlockTFs.last == sender {
                 sender.resignFirstResponder()
             } else {
-                digitBlocks[indexOfTF + 1].becomeFirstResponder()
+                digitBlockTFs[indexOfTF + 1].becomeFirstResponder()
             }
         }
         
-        nextButton.isEnabled = shouldEnableButton()
+        nextButton.isEnabled = shouldEnableButton(ifTFsAreValid: digitBlockTFs)
     }
 }
 
 // MARK: - Checking Methods
 private extension SMSCodeViewController {
-    func isValid(_ textfields: [UITextField]) -> Bool {
+    func isValid(_ textFields: [UITextField]) -> Bool {
         var check = true
         let numbers: [Character] = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
         
-        textfields.forEach { textfield in
-            if textfield.text?.count ?? 0 > 1 {
-                let lastChar = String(textfield.text?.last ?? " ")
-                textfield.text = lastChar == " " ? "" : lastChar
+        textFields.forEach { textField in
+            if textField.text?.count ?? 0 > 1 {
+                let lastChar = String(textField.text?.last ?? " ")
+                textField.text = lastChar == " " ? "" : lastChar
             }
             
-            if textfield.text?.count == 1 {
-                textfield.text?.forEach { char in
+            if textField.text?.count == 1 {
+                textField.text?.forEach { char in
                     if !numbers.contains(char) {
-                        textfield.text = ""
+                        textField.text = ""
                         check = false
                         return
                     }
@@ -83,11 +83,11 @@ private extension SMSCodeViewController {
         return check
     }
     
-    func isValid(_ textfields: UITextField...) -> Bool {
-        isValid(textfields)
+    func isValid(_ textFields: UITextField...) -> Bool {
+        isValid(textFields)
     }
     
-    func shouldEnableButton() -> Bool {
-        isValid(digitBlocks)
+    func shouldEnableButton(ifTFsAreValid textFields: [UITextField]) -> Bool {
+        isValid(textFields)
     }
 }

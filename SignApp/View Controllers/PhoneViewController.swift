@@ -9,13 +9,13 @@ import UIKit
 
 final class PhoneViewController: UIViewController {
     
-    @IBOutlet private var numberBlocks: [UITextField]!
+    @IBOutlet private var numberBlockTFs: [UITextField]!
     @IBOutlet private var nextButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        numberBlocks.first?.becomeFirstResponder()
+        numberBlockTFs.first?.becomeFirstResponder()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -24,19 +24,20 @@ final class PhoneViewController: UIViewController {
     
     @IBAction private func numberBlockTFChanged(_ sender: UITextField) {
         if isValid(sender) {
-            guard let indexOfTF = numberBlocks.firstIndex(of: sender) else { return }
+            guard let indexOfTF = numberBlockTFs.firstIndex(of: sender) else { return }
             
-            if numberBlocks.last == sender {
+            if numberBlockTFs.last == sender {
                 sender.resignFirstResponder()
             } else {
-                numberBlocks[indexOfTF + 1].becomeFirstResponder()
+                numberBlockTFs[indexOfTF + 1].becomeFirstResponder()
             }
         }
         
+        sender.backgroundColor = UIColor.clear
         nextButton.isEnabled = shouldEnableButton()
     }
     
-    @IBAction private func numberBlockTFEdited(_ sender: UITextField) {
+    @IBAction private func numberBlockTFDidEndEditing(_ sender: UITextField) {
         let color = isValid(sender)
         ? UIColor.clear.cgColor
         : CGColor(
@@ -47,7 +48,6 @@ final class PhoneViewController: UIViewController {
         )
         
         sender.backgroundColor = UIColor(cgColor: color)
-        
         nextButton.isEnabled = shouldEnableButton()
     }
     
@@ -56,15 +56,15 @@ final class PhoneViewController: UIViewController {
 
 // MARK: - Checking Methods
 private extension PhoneViewController {
-    func isValid(_ textfields: [UITextField]) -> Bool {
+    func isValid(_ textFields: [UITextField]) -> Bool {
         var check = true
         let numbers: [Character] = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
         
-        textfields.forEach { textfield in
-            let digitsCount = numberBlocks.firstIndex(of: textfield) ?? 0 > 1 ? 2 : 3
+        textFields.forEach { textField in
+            let digitsCount = numberBlockTFs.firstIndex(of: textField) ?? 0 > 1 ? 2 : 3
             
-            if textfield.text?.count == digitsCount {
-                textfield.text?.forEach { char in
+            if textField.text?.count == digitsCount {
+                textField.text?.forEach { char in
                     if !numbers.contains(char) {
                         check = false
                         return
@@ -80,11 +80,11 @@ private extension PhoneViewController {
         return check
     }
     
-    func isValid(_ textfields: UITextField...) -> Bool {
-        isValid(textfields)
+    func isValid(_ textFields: UITextField...) -> Bool {
+        isValid(textFields)
     }
     
     func shouldEnableButton() -> Bool {
-        isValid(numberBlocks)
+        isValid(numberBlockTFs)
     }
 }
