@@ -7,13 +7,9 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+final class MainViewController: UIViewController {
+    @IBAction private func unwind(for segue: UIStoryboardSegue) {
+        
     }
-
-
 }
 
