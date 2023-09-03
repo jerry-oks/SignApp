@@ -14,8 +14,8 @@ final class FullnameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        textFields.forEach { textfield in
-            textfield.delegate = self
+        textFields.forEach { textField in
+            textField.delegate = self
         }
         textFields.first?.becomeFirstResponder()
     }
@@ -24,12 +24,12 @@ final class FullnameViewController: UIViewController {
         view.endEditing(true)
     }
     
-    @IBAction func tfChanged(_ sender: UITextField) {
+    @IBAction private func tfChanged(_ sender: UITextField) {
         sender.backgroundColor = UIColor.clear
         nextButton.isEnabled = shouldEnableButton()
     }
     
-    @IBAction func tfDidEndEditing(_ sender: UITextField) {
+    @IBAction private func tfDidEndEditing(_ sender: UITextField) {
         let color = isValid(sender)
         ? UIColor.clear.cgColor
         : CGColor(
@@ -58,8 +58,8 @@ private extension FullnameViewController {
     func isValid(_ textFields: [UITextField]) -> Bool {
         var check = true
         
-        textFields.forEach { textfield in
-            if textfield.text?.count ?? 0 >= 2 {
+        textFields.forEach { textField in
+            if textField.text?.count ?? 0 >= 2 {
                 return
             }
             
@@ -70,8 +70,8 @@ private extension FullnameViewController {
         return check
     }
     
-    func isValid(_ textfields: UITextField...) -> Bool {
-        isValid(textfields)
+    func isValid(_ textFields: UITextField...) -> Bool {
+        isValid(textFields)
     }
     
     func shouldEnableButton() -> Bool {
