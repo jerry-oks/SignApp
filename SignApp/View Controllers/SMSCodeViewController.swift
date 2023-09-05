@@ -12,12 +12,21 @@ final class SMSCodeViewController: UIViewController {
     @IBOutlet private var nextButton: UIButton!
     @IBOutlet private var codeLabel: UILabel!
     
+    @IBOutlet private var stackView: UIStackView!
+    
     unowned var delegate: SMSCodeViewControllerDelegate!
     
     private let code = Int.random(in: 100000...999999)
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            stackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16),
+            stackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
+            stackView.bottomAnchor.constraint(equalTo: view.keyboardLayoutGuide.topAnchor, constant: -16)
+        ])
         
         codeLabel.text = "📩 Ваш код: \(code)"
         codeLabel.alpha = 0
@@ -53,18 +62,17 @@ final class SMSCodeViewController: UIViewController {
         
         nextButton.isEnabled = shouldEnableButton(ifTFsAreValid: digitBlockTFs)
     }
-    @IBAction func nextButtonTapped() {
+    @IBAction private func nextButtonTapped() {
         var enteredCode = ""
+        
         digitBlockTFs.forEach { digitBlockTF in
             enteredCode.append(digitBlockTF.text ?? "")
         }
-        print(enteredCode)
-        print(code)
+
         if Int(enteredCode) == code {
             dismiss(animated: true)
             delegate?.setValidityStatus(true)
             delegate?.goNext()
-            
         } else {
             let alert = UIAlertController(
                 title: "Неверный код",
@@ -85,7 +93,8 @@ final class SMSCodeViewController: UIViewController {
             present(alert, animated: true)
         }
     }
-    @IBAction func skipButtonTapped() {
+    
+    @IBAction private func skipButtonTapped() {
         dismiss(animated: true)
         delegate?.setValidityStatus(false)
         delegate?.goNext()

@@ -13,8 +13,6 @@ final class SettingsViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let profileEditVC = segue.destination as? ProfileEditViewController {
             profileEditVC.user = user
-        } else if true {
-            
         }
     }
 }

@@ -8,15 +8,15 @@
 import UIKit
 
 final class ProfilePicViewController: UIViewController {
-    @IBOutlet var profilePicIV: UIImageView!
-    @IBOutlet var bgColorView: UIView!
+    @IBOutlet private var profilePicIV: UIImageView!
+    @IBOutlet private var bgColorView: UIView!
     
-    @IBOutlet var picButtons: [UIButton]!
-    @IBOutlet var bgColorButtons: [UIButton]!
+    @IBOutlet private var picButtons: [UIButton]!
+    @IBOutlet private var bgColorButtons: [UIButton]!
     
-    @IBOutlet var cancelButton: UIButton!
-    @IBOutlet var saveButton: UIButton!
-    @IBOutlet var doneButton: UIButton!
+    @IBOutlet private var cancelButton: UIButton!
+    @IBOutlet private var saveButton: UIButton!
+    @IBOutlet private var doneButton: UIButton!
   
     unowned var delegate: ProfilePicViewControllerDelegate!
     
@@ -69,14 +69,14 @@ final class ProfilePicViewController: UIViewController {
         }
     }
     
-    @IBAction func profilePicButtonPressed(_ sender: UIButton) {
+    @IBAction private func profilePicButtonPressed(_ sender: UIButton) {
         let index = picButtons.firstIndex(of: sender) ?? 0
         user.profilePic = DataStore.shared.images[index]
         
         profilePicIV.image = sender.imageView?.image
 
     }
-    @IBAction func bgColorButtonPressed(_ sender: UIButton) {
+    @IBAction private func bgColorButtonPressed(_ sender: UIButton) {
         let index = bgColorButtons.firstIndex(of: sender) ?? 0
         user.profilePicColor = DataStore.shared.colors[index]
         

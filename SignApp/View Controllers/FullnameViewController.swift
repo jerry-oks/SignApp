@@ -11,10 +11,19 @@ final class FullnameViewController: UIViewController {
     @IBOutlet private var textFields: [UITextField]!
     @IBOutlet private var nextButton: UIButton!
     
+    @IBOutlet var stackView: UIStackView!
+    
     var user = User()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            stackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16),
+            stackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
+            stackView.bottomAnchor.constraint(equalTo: view.keyboardLayoutGuide.topAnchor, constant: -16)
+        ])
         
         textFields.forEach { textField in
             textField.delegate = self
@@ -50,10 +59,9 @@ final class FullnameViewController: UIViewController {
         nextButton.isEnabled = shouldEnableButton()
     }
     
-    @IBAction func nextButtonTapped() {
+    @IBAction private func nextButtonTapped() {
         user.name = textFields.first?.text ?? ""
         user.surname = textFields.last?.text ?? ""
-        print(user)
     }
 }
 

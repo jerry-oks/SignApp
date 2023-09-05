@@ -12,12 +12,12 @@ protocol ProfilePicViewControllerDelegate: AnyObject {
 }
 
 final class ProfileViewController: UIViewController {
-    @IBOutlet var fullNameLabel: UILabel!
-    @IBOutlet var phoneNumberLabel: UILabel!
-    @IBOutlet var phoneNumberStatusLabel: UILabel!
-    @IBOutlet var dobLabel: UILabel!
-    @IBOutlet var profilePicIV: UIImageView!
-    @IBOutlet var bgColorView: UIView!
+    @IBOutlet private var fullNameLabel: UILabel!
+    @IBOutlet private var phoneNumberLabel: UILabel!
+    @IBOutlet private var phoneNumberStatusLabel: UILabel!
+    @IBOutlet private var dobLabel: UILabel!
+    @IBOutlet private var profilePicIV: UIImageView!
+    @IBOutlet private var bgColorView: UIView!
     
     var user = User()
     
@@ -39,10 +39,6 @@ final class ProfileViewController: UIViewController {
             profilePicVC.delegate = self
             profilePicVC.isModal = true
         }
-    }
-    
-    @IBAction func profilePicButtonTapped() {
-        
     }
 }
 
@@ -90,8 +86,6 @@ extension ProfileViewController: ProfilePicViewControllerDelegate {
     func changePic(image: String, color: String) {
         user.profilePic = image
         user.profilePicColor = color
-//
-//        showUserData()
     }
 
 }

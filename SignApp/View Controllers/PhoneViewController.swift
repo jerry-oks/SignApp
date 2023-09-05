@@ -17,9 +17,20 @@ final class PhoneViewController: UIViewController {
     @IBOutlet private var numberBlockTFs: [UITextField]!
     @IBOutlet private var nextButton: UIButton!
     
-    @IBOutlet var stackView: UIStackView!
+    @IBOutlet private var stackView: UIStackView!
     
     var user = User()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            stackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16),
+            stackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
+            stackView.bottomAnchor.constraint(equalTo: view.keyboardLayoutGuide.topAnchor, constant: -16)
+        ])
+    }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -68,12 +79,11 @@ final class PhoneViewController: UIViewController {
         nextButton.isEnabled = shouldEnableButton()
     }
     
-    @IBAction func nextButtonTapped() {
+    @IBAction private func nextButtonTapped() {
         user.phone.firstBlock = numberBlockTFs[0].text ?? ""
         user.phone.secondBlock = numberBlockTFs[1].text ?? ""
         user.phone.thirdBlock = numberBlockTFs[2].text ?? ""
         user.phone.fourthBlock = numberBlockTFs[3].text ?? ""
-        print(user)
     }
     
 }

@@ -8,7 +8,7 @@
 import UIKit
 
 final class DOBViewController: UIViewController {
-    @IBOutlet var dobDP: UIDatePicker!
+    @IBOutlet private var dobDP: UIDatePicker!
     
     var user = User()
     
@@ -17,8 +17,7 @@ final class DOBViewController: UIViewController {
         profilePicVC.user = user
     }
     
-    @IBAction func nextButtonTapped() {
+    @IBAction private func nextButtonTapped() {
         user.dateOfBirth = dobDP.date
-        print(user)
     }
 }

@@ -54,25 +54,25 @@
         <!--Номер телефона-->
         <scene sceneID="zr3-SA-Nhk">
             <objects>
-                <viewController keyboardType="off" id="gju-rp-Tcx" customClass="PhoneViewController" customModule="SignApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="gju-rp-Tcx" customClass="PhoneViewController" customModule="SignApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="d0P-Sh-XqL">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="AIH-Bl-pRk">
-                                <rect key="frame" x="16" y="467.5" width="288" height="84.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="AIH-Bl-pRk">
+                                <rect key="frame" x="16" y="467" width="288" height="85"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="fH9-tb-o2m">
-                                        <rect key="frame" x="0.0" y="0.0" width="288" height="34"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="34.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="247" verticalHuggingPriority="251" text="+7  (" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EtS-Wq-dcR">
-                                                <rect key="frame" x="0.0" y="5" width="40.5" height="24"/>
+                                                <rect key="frame" x="0.0" y="5.5" width="40.5" height="24"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="999" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1fv-de-3Lf">
-                                                <rect key="frame" x="41.5" y="0.0" width="61.5" height="34"/>
+                                                <rect key="frame" x="41.5" y="0.5" width="61.5" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="m2t-I3-0wE"/>
                                                 </constraints>
@@ -84,13 +84,13 @@
                                                 </connections>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=")" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z8C-Th-YA9">
-                                                <rect key="frame" x="104" y="5" width="6" height="24"/>
+                                                <rect key="frame" x="104" y="5.5" width="6" height="24"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="123" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xbZ-Lo-h1h">
-                                                <rect key="frame" x="111" y="0.0" width="61.5" height="34"/>
+                                                <rect key="frame" x="111" y="0.5" width="61.5" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="tCa-8a-UHU"/>
                                                 </constraints>
@@ -102,39 +102,39 @@
                                                 </connections>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Utr-Z2-Eqs">
-                                                <rect key="frame" x="173.5" y="5" width="8.5" height="24"/>
+                                                <rect key="frame" x="173.5" y="5.5" width="8.5" height="24"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="45" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vSF-ju-Efp">
-                                                <rect key="frame" x="183" y="0.0" width="47.5" height="34"/>
+                                                <rect key="frame" x="183" y="0.5" width="47.5" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="Lcn-qc-cyX"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                                 <connections>
-                                                    <action selector="numberBlockTFChanged:" destination="gju-rp-Tcx" eventType="editingChanged" id="Zyf-8y-V8X"/>
-                                                    <action selector="numberBlockTFDidEndEditing:" destination="gju-rp-Tcx" eventType="editingDidEnd" id="jcW-Og-ofm"/>
+                                                    <action selector="numberBlockTFChanged:" destination="gju-rp-Tcx" eventType="editingChanged" id="05Y-qj-qFL"/>
+                                                    <action selector="numberBlockTFDidEndEditing:" destination="gju-rp-Tcx" eventType="editingDidEnd" id="eDe-16-31k"/>
                                                 </connections>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1LD-ES-tlf">
-                                                <rect key="frame" x="231.5" y="5" width="8.5" height="24"/>
+                                                <rect key="frame" x="231.5" y="5.5" width="8.5" height="24"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="67" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j94-KG-nsc">
-                                                <rect key="frame" x="241" y="0.0" width="47" height="34"/>
+                                                <rect key="frame" x="241" y="0.5" width="47" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="xNM-7D-iZK"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                                 <connections>
-                                                    <action selector="numberBlockTFChanged:" destination="gju-rp-Tcx" eventType="editingChanged" id="UDf-r4-V7f"/>
-                                                    <action selector="numberBlockTFDidEndEditing:" destination="gju-rp-Tcx" eventType="editingDidEnd" id="JY1-Q6-Ihm"/>
+                                                    <action selector="numberBlockTFChanged:" destination="gju-rp-Tcx" eventType="editingChanged" id="fRo-8b-bHB"/>
+                                                    <action selector="numberBlockTFDidEndEditing:" destination="gju-rp-Tcx" eventType="editingDidEnd" id="HPZ-gI-YI8"/>
                                                 </connections>
                                             </textField>
                                         </subviews>
@@ -144,7 +144,7 @@
                                         </constraints>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8cI-uO-FYz">
-                                        <rect key="frame" x="0.0" y="50" width="288" height="34.5"/>
+                                        <rect key="frame" x="0.0" y="50.5" width="288" height="34.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Далее"/>
                                         <connections>
@@ -156,12 +156,12 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="t18-p5-fIr"/>
-                        <keyboardLayoutGuide key="keyboard" id="AJf-hR-XlN"/>
+                        <keyboardLayoutGuide key="keyboard" followsUndockedKeyboard="YES" id="AJf-hR-XlN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="AIH-Bl-pRk" firstAttribute="leading" secondItem="t18-p5-fIr" secondAttribute="leading" constant="16" id="3ed-qe-lQH"/>
-                            <constraint firstItem="AJf-hR-XlN" firstAttribute="top" secondItem="AIH-Bl-pRk" secondAttribute="bottom" constant="16" id="9dG-20-HWG"/>
-                            <constraint firstItem="t18-p5-fIr" firstAttribute="trailing" secondItem="AIH-Bl-pRk" secondAttribute="trailing" constant="16" id="VAO-Zv-LTF"/>
+                            <constraint firstItem="AJf-hR-XlN" firstAttribute="top" secondItem="AIH-Bl-pRk" secondAttribute="bottom" constant="16" id="0fH-jr-osF"/>
+                            <constraint firstItem="AIH-Bl-pRk" firstAttribute="leading" secondItem="t18-p5-fIr" secondAttribute="leading" constant="16" id="GsI-vT-2ie"/>
+                            <constraint firstItem="t18-p5-fIr" firstAttribute="trailing" secondItem="AIH-Bl-pRk" secondAttribute="trailing" constant="16" id="dk5-EZ-SqB"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Номер телефона" id="H0a-jM-QY5">
@@ -300,6 +300,7 @@
                     <connections>
                         <outlet property="codeLabel" destination="eTG-ng-nPv" id="FlL-zd-Jao"/>
                         <outlet property="nextButton" destination="nwe-nb-QlH" id="QO1-36-biF"/>
+                        <outlet property="stackView" destination="EKs-Et-Hhn" id="F0O-hd-wIb"/>
                         <outletCollection property="digitBlockTFs" destination="9fP-6C-odF" collectionClass="NSMutableArray" id="0Jd-Lq-E7z"/>
                         <outletCollection property="digitBlockTFs" destination="eTr-yI-DHp" collectionClass="NSMutableArray" id="QOd-uB-hVK"/>
                         <outletCollection property="digitBlockTFs" destination="F9i-kV-dix" collectionClass="NSMutableArray" id="J1c-fd-aa2"/>
@@ -394,6 +395,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="nextButton" destination="8iZ-SZ-C73" id="ISA-gr-38V"/>
+                        <outlet property="stackView" destination="pR7-gd-DV0" id="cos-WK-4zh"/>
                         <outletCollection property="textFields" destination="D4R-1m-eMS" collectionClass="NSMutableArray" id="U2Y-Qe-4Z5"/>
                         <outletCollection property="textFields" destination="36e-lU-9t3" collectionClass="NSMutableArray" id="QnN-Io-3hk"/>
                     </connections>
@@ -466,10 +468,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oso-Xd-5EW">
-                                <rect key="frame" x="16" y="16" width="288" height="286"/>
+                                <rect key="frame" x="16" y="128.5" width="288" height="173.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rba-M2-ngw">
-                                        <rect key="frame" x="72" y="72" width="144" height="141.5"/>
+                                        <rect key="frame" x="72" y="15.5" width="144" height="141.5"/>
                                         <color key="tintColor" systemColor="secondaryLabelColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="rba-M2-ngw" secondAttribute="height" multiplier="1:1" id="Ata-L3-Lvh"/>
@@ -654,7 +656,7 @@
                                         <buttonConfiguration key="configuration" style="filled" title="Сохранить"/>
                                         <connections>
                                             <action selector="saveButtonTapped" destination="vGn-DY-p1x" eventType="touchUpInside" id="mnl-nC-iuj"/>
-                                            <segue destination="0f8-vC-LfB" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="ZMG-1L-2FM"/>
+                                            <segue destination="0f8-vC-LfB" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="9uV-Hu-Alu"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ei7-zE-hJx">
@@ -1005,7 +1007,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GEd-eF-ZWz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6789.375" y="1350"/>
+            <point key="canvasLocation" x="6791" y="1168"/>
         </scene>
         <!--О приложении-->
         <scene sceneID="fQ8-XB-xbo">
@@ -1051,7 +1053,7 @@ ver. 0.1 alpha</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P2x-Xb-UUW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7579" y="1350"/>
+            <point key="canvasLocation" x="7569" y="1167"/>
         </scene>
         <!--Параметры-->
         <scene sceneID="mQM-4z-tNe">
@@ -1095,8 +1097,8 @@ ver. 0.1 alpha</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="PM2-DL-4n7"/>
-        <segue reference="A2j-4V-UV1"/>
+        <segue reference="9uV-Hu-Alu"/>
+        <segue reference="Bu4-BN-Oti"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="gearshape.fill" catalog="system" width="128" height="123"/>

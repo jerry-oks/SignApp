@@ -24,18 +24,6 @@ final class ProfileEditViewController: UIViewController {
         dobDP.date = user.dateOfBirth
     }
     
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//        
-//        tabBarController?.tabBar.isHidden = true
-//    }
-//    
-//    override func viewWillDisappear(_ animated: Bool) {
-//        super.viewWillDisappear(animated)
-//        
-//        tabBarController?.tabBar.isHidden = false
-//    }
-    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
     }
