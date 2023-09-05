@@ -7,10 +7,6 @@
 
 import UIKit
 
-protocol ProfilePicViewControllerDelegate: AnyObject {
-    func changePic(image: String, color: String)
-}
-
 final class ProfileViewController: UIViewController {
     @IBOutlet private var fullNameLabel: UILabel!
     @IBOutlet private var phoneNumberLabel: UILabel!
@@ -36,7 +32,6 @@ final class ProfileViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let profilePicVC = segue.destination as? ProfilePicViewController {
             profilePicVC.user = user
-            profilePicVC.delegate = self
             profilePicVC.isModal = true
         }
     }
@@ -82,10 +77,3 @@ private extension ProfileViewController {
     }
 }
 
-extension ProfileViewController: ProfilePicViewControllerDelegate {
-    func changePic(image: String, color: String) {
-        user.profilePic = image
-        user.profilePicColor = color
-    }
-
-}

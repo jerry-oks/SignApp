@@ -18,8 +18,6 @@ final class ProfilePicViewController: UIViewController {
     @IBOutlet private var saveButton: UIButton!
     @IBOutlet private var doneButton: UIButton!
   
-    unowned var delegate: ProfilePicViewControllerDelegate!
-    
     var user = User()
     var isModal = false
     

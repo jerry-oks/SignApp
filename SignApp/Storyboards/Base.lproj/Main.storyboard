@@ -468,10 +468,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oso-Xd-5EW">
-                                <rect key="frame" x="16" y="128.5" width="288" height="173.5"/>
+                                <rect key="frame" x="16" y="16" width="288" height="286"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rba-M2-ngw">
-                                        <rect key="frame" x="72" y="15.5" width="144" height="141.5"/>
+                                        <rect key="frame" x="72" y="72" width="144" height="141.5"/>
                                         <color key="tintColor" systemColor="secondaryLabelColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="rba-M2-ngw" secondAttribute="height" multiplier="1:1" id="Ata-L3-Lvh"/>
@@ -734,7 +734,6 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title=""/>
                                         <connections>
-                                            <action selector="profilePicButtonTapped" destination="WbY-FW-6cj" eventType="touchUpInside" id="Fwy-lm-Mbb"/>
                                             <segue destination="vGn-DY-p1x" kind="presentation" modalPresentationStyle="fullScreen" id="A2j-4V-UV1"/>
                                         </connections>
                                     </button>
@@ -1097,8 +1096,8 @@ ver. 0.1 alpha</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="9uV-Hu-Alu"/>
-        <segue reference="Bu4-BN-Oti"/>
+        <segue reference="WI3-dR-lAb"/>
+        <segue reference="A2j-4V-UV1"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="gearshape.fill" catalog="system" width="128" height="123"/>
