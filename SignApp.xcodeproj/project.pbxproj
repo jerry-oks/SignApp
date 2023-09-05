@@ -22,7 +22,6 @@
 		3BD775B02AA1272400A9F684 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD775AF2AA1272400A9F684 /* ProfileViewController.swift */; };
 		3BD775B22AA1273000A9F684 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD775B12AA1273000A9F684 /* SettingsViewController.swift */; };
 		3BD775B42AA1275600A9F684 /* ProfileEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD775B32AA1275600A9F684 /* ProfileEditViewController.swift */; };
-		3BD775B62AA1276B00A9F684 /* ProfilePicEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD775B52AA1276B00A9F684 /* ProfilePicEditViewController.swift */; };
 		3BD775B82AA1277900A9F684 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD775B72AA1277900A9F684 /* AboutViewController.swift */; };
 		3BD775BA2AA127AC00A9F684 /* SMSCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD775B92AA127AC00A9F684 /* SMSCodeViewController.swift */; };
 		3BD775BC2AA1284600A9F684 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD775BB2AA1284600A9F684 /* MainNavigationController.swift */; };
@@ -48,7 +47,6 @@
 		3BD775AF2AA1272400A9F684 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		3BD775B12AA1273000A9F684 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		3BD775B32AA1275600A9F684 /* ProfileEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditViewController.swift; sourceTree = "<group>"; };
-		3BD775B52AA1276B00A9F684 /* ProfilePicEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePicEditViewController.swift; sourceTree = "<group>"; };
 		3BD775B72AA1277900A9F684 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		3BD775B92AA127AC00A9F684 /* SMSCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMSCodeViewController.swift; sourceTree = "<group>"; };
 		3BD775BB2AA1284600A9F684 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
@@ -134,7 +132,6 @@
 				3BD775AF2AA1272400A9F684 /* ProfileViewController.swift */,
 				3BD775B12AA1273000A9F684 /* SettingsViewController.swift */,
 				3BD775B32AA1275600A9F684 /* ProfileEditViewController.swift */,
-				3BD775B52AA1276B00A9F684 /* ProfilePicEditViewController.swift */,
 				3BD775B72AA1277900A9F684 /* AboutViewController.swift */,
 				3BD775BB2AA1284600A9F684 /* MainNavigationController.swift */,
 				3BD775BD2AA1285D00A9F684 /* SettingsNavigationController.swift */,
@@ -229,7 +226,6 @@
 				3BD775AE2AA1270800A9F684 /* ProfilePicViewController.swift in Sources */,
 				3BD775AC2AA126EF00A9F684 /* DOBViewController.swift in Sources */,
 				3BD775BC2AA1284600A9F684 /* MainNavigationController.swift in Sources */,
-				3BD775B62AA1276B00A9F684 /* ProfilePicEditViewController.swift in Sources */,
 				3B7B1FC02AA51D0000334572 /* DataStore.swift in Sources */,
 				3B0590D32AA137690063A4C3 /* User.swift in Sources */,
 				3BD775902AA0FE0300A9F684 /* AppDelegate.swift in Sources */,
@@ -396,7 +392,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -429,7 +425,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

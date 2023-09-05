@@ -8,6 +8,7 @@
 import UIKit
 
 protocol SMSCodeViewControllerDelegate: AnyObject {
+    func setValidityStatus(_ isValidated: Bool)
     func goNext()
 }
 
@@ -16,10 +17,12 @@ final class PhoneViewController: UIViewController {
     @IBOutlet private var numberBlockTFs: [UITextField]!
     @IBOutlet private var nextButton: UIButton!
     
+    @IBOutlet var stackView: UIStackView!
+    
     var user = User()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         
         numberBlockTFs.first?.becomeFirstResponder()
     }
@@ -30,7 +33,6 @@ final class PhoneViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let smsCodeVC = segue.destination as? SMSCodeViewController {
-            smsCodeVC.user = user
             smsCodeVC.delegate = self
         } else if let fullnameVC = segue.destination as? FullnameViewController {
             fullnameVC.user = user
@@ -112,6 +114,10 @@ private extension PhoneViewController {
 }
 
 extension PhoneViewController: SMSCodeViewControllerDelegate {
+    func setValidityStatus(_ isValidated: Bool) {
+        user.isValidated = isValidated
+    }
+    
     func goNext() {
         performSegue(withIdentifier: "openFullnameVC", sender: nil)
     }

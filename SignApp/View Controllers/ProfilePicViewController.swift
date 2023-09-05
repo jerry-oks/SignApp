@@ -17,6 +17,8 @@ final class ProfilePicViewController: UIViewController {
     @IBOutlet var cancelButton: UIButton!
     @IBOutlet var saveButton: UIButton!
     @IBOutlet var doneButton: UIButton!
+  
+    unowned var delegate: ProfilePicViewControllerDelegate!
     
     var user = User()
     var isModal = false
@@ -38,17 +40,19 @@ final class ProfilePicViewController: UIViewController {
             button.tintColor = getColor(fromName: colorName)
         }
         
+        profilePicIV.image = UIImage(systemName: user.profilePic)
+        bgColorView.backgroundColor = getColor(fromName: user.profilePicColor)
+        
         if isModal {
             doneButton.isHidden = true
             saveButton.isHidden = false
             cancelButton.isHidden = false
+            cancelButton.tintColor = .systemRed
         }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        bgColorView.layer.cornerRadius = bgColorView.frame.height / 2
+    override func viewWillLayoutSubviews() {
+        bgColorView.layer.cornerRadius = 8
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -57,9 +61,11 @@ final class ProfilePicViewController: UIViewController {
                 if let profileVC = vc as? ProfileViewController {
                     profileVC.user = user
                 }
+                if let settingsNC = vc as? SettingsNavigationController {
+                    guard let settingsVC = settingsNC.topViewController as? SettingsViewController else { return }
+                    settingsVC.user = user
+                }
             }
-        } else if let profileEditVC = segue.destination as? ProfileEditViewController {
-            return
         }
     }
     
@@ -77,21 +83,20 @@ final class ProfilePicViewController: UIViewController {
         bgColorView.backgroundColor = sender.tintColor
     }
     
-    @IBAction func bottomButtonPressed(_ sender: UIButton) {
-        switch sender {
-        case doneButton:
-            print(user)
-        case saveButton:
-            fallthrough
-        default:
-            dismiss(animated: true)
-        }
+    
+    
+    @IBAction func cancelButtonTapped() {
+        dismiss(animated: true)
+    }
+    
+    @IBAction func saveButtonTapped() {
+        
     }
 }
 
 private extension ProfilePicViewController {
     func getColor(fromName name: String) -> UIColor {
-        var color = UIColor.clear
+        var color = UIColor.separator
         
         switch name {
         case "red":
@@ -104,8 +109,10 @@ private extension ProfilePicViewController {
             color = UIColor.systemGreen
         case "blue":
             color = UIColor.systemBlue
-        default:
+        case "purple":
             color = UIColor.systemPurple
+        default:
+            color = UIColor.separator
         }
         
         return color

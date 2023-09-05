@@ -12,7 +12,7 @@ final class ProfileEditViewController: UIViewController {
     @IBOutlet private var surnameTF: UITextField!
     @IBOutlet private var phoneNumberTF: UITextField!
     @IBOutlet private var dobDP: UIDatePicker!
-    
+        
     var user = User()
     
     override func viewDidLoad() {
@@ -24,15 +24,44 @@ final class ProfileEditViewController: UIViewController {
         dobDP.date = user.dateOfBirth
     }
     
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//        
+//        tabBarController?.tabBar.isHidden = true
+//    }
+//    
+//    override func viewWillDisappear(_ animated: Bool) {
+//        super.viewWillDisappear(animated)
+//        
+//        tabBarController?.tabBar.isHidden = false
+//    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let profilePicVC = segue.destination as? ProfilePicViewController {
-            profilePicVC.user = user
-            profilePicVC.isModal = true
-        } else if let profileVC = segue.destination as? ProfileViewController {
-            profileVC.user = user
+        if let tabBarController = segue.destination as? TabBarController {
+            tabBarController.viewControllers?.forEach { vc in
+                if let profileVC = vc as? ProfileViewController {
+                    profileVC.user = user
+                }
+                if let settingsNC = vc as? SettingsNavigationController {
+                    guard let settingsVC = settingsNC.topViewController as? SettingsViewController else { return }
+                    settingsVC.user = user
+                }
+            }
         }
     }
     
 
+    
+    @IBAction private func saveButtonTapped(_ sender: Any) {
+        user.name = nameTF.text ?? ""
+        user.surname = surnameTF.text ?? ""
+        user.dateOfBirth = dobDP.date
+        performSegue(withIdentifier: "openTabBarVC", sender: nil)
+    }
+    
     
 }

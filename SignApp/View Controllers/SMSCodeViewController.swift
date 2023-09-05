@@ -12,8 +12,6 @@ final class SMSCodeViewController: UIViewController {
     @IBOutlet private var nextButton: UIButton!
     @IBOutlet private var codeLabel: UILabel!
     
-    var user = User()
-    
     unowned var delegate: SMSCodeViewControllerDelegate!
     
     private let code = Int.random(in: 100000...999999)
@@ -63,9 +61,10 @@ final class SMSCodeViewController: UIViewController {
         print(enteredCode)
         print(code)
         if Int(enteredCode) == code {
-            user.isValidated = true
             dismiss(animated: true)
+            delegate?.setValidityStatus(true)
             delegate?.goNext()
+            
         } else {
             let alert = UIAlertController(
                 title: "Неверный код",
@@ -87,7 +86,8 @@ final class SMSCodeViewController: UIViewController {
         }
     }
     @IBAction func skipButtonTapped() {
-        user.isValidated = false
+        dismiss(animated: true)
+        delegate?.setValidityStatus(false)
         delegate?.goNext()
     }
 }

@@ -8,5 +8,10 @@
 import UIKit
 
 final class TabBarController: UITabBarController {
+    deinit {
+        print("deinit")
+    }
+    
+    @IBAction private func secondUnwind(for segue: UIStoryboardSegue) {}
 
 }

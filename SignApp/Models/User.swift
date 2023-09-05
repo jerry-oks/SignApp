@@ -13,7 +13,7 @@ struct User {
     var name = ""
     var surname = ""
     var dateOfBirth = Date()
-    var profilePic = ""
+    var profilePic = "person.fill"
     var profilePicColor = ""
     
     var fullname: String {
@@ -26,15 +26,7 @@ struct PhoneNumber {
     var secondBlock = ""
     var thirdBlock = ""
     var fourthBlock = ""
-    
-    var full: String {
-        var formatted: String {
-            "+7 (\(firstBlock)) \(secondBlock)-\(thirdBlock)-\(fourthBlock)"
-        }
-        
-        return firstBlock + secondBlock + thirdBlock + fourthBlock
-    }
-    
+
     func formatted() -> String {
         "+7 (\(firstBlock)) \(secondBlock)-\(thirdBlock)-\(fourthBlock)"
     }

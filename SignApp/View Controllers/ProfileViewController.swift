@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol ProfilePicViewControllerDelegate: AnyObject {
+    func changePic(image: String, color: String)
+}
+
 final class ProfileViewController: UIViewController {
     @IBOutlet var fullNameLabel: UILabel!
     @IBOutlet var phoneNumberLabel: UILabel!
@@ -21,7 +25,6 @@ final class ProfileViewController: UIViewController {
         super.viewDidLoad()
         
         showUserData()
-        print(user)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -30,7 +33,17 @@ final class ProfileViewController: UIViewController {
         bgColorView.layer.cornerRadius = bgColorView.frame.height / 2
     }
     
-    @IBAction private func unwind(for segue: UIStoryboardSegue) {}
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let profilePicVC = segue.destination as? ProfilePicViewController {
+            profilePicVC.user = user
+            profilePicVC.delegate = self
+            profilePicVC.isModal = true
+        }
+    }
+    
+    @IBAction func profilePicButtonTapped() {
+        
+    }
 }
 
 private extension ProfileViewController {
@@ -48,8 +61,10 @@ private extension ProfileViewController {
             color = UIColor.systemGreen
         case "blue":
             color = UIColor.systemBlue
-        default:
+        case "purple":
             color = UIColor.systemPurple
+        default:
+            color = UIColor.separator
         }
         
         return color
@@ -69,4 +84,14 @@ private extension ProfileViewController {
             phoneNumberStatusLabel.textColor = .systemRed
         }
     }
+}
+
+extension ProfileViewController: ProfilePicViewControllerDelegate {
+    func changePic(image: String, color: String) {
+        user.profilePic = image
+        user.profilePicColor = color
+//
+//        showUserData()
+    }
+
 }
