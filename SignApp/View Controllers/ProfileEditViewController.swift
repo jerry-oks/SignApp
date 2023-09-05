@@ -48,7 +48,19 @@ final class ProfileEditViewController: UIViewController {
         user.name = nameTF.text ?? ""
         user.surname = surnameTF.text ?? ""
         user.dateOfBirth = dobDP.date
-        performSegue(withIdentifier: "openTabBarVC", sender: nil)
+        
+        let alert = UIAlertController(
+            title: "Изменения сохранены",
+            message: "",
+            preferredStyle: .alert
+        )
+        alert.addAction(
+            UIAlertAction( title: "OK", style: .default) { _ in
+                self.performSegue(withIdentifier: "openTabBarVC", sender: nil)
+                }
+        )
+        
+        present(alert, animated: true)
     }
     
     

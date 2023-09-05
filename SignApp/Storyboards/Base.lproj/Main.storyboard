@@ -900,11 +900,11 @@
             <objects>
                 <viewController hidesBottomBarWhenPushed="YES" id="vrD-zh-7Fp" customClass="ProfileEditViewController" customModule="SignApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gaB-9d-wR6">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ofc-eB-jW9">
-                                <rect key="frame" x="16" y="108.5" width="288" height="304"/>
+                                <rect key="frame" x="16" y="16" width="288" height="304"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xWu-8Q-TZt">
                                         <rect key="frame" x="0.0" y="0.0" width="288" height="60"/>
@@ -1001,7 +1001,7 @@
                         <outlet property="nameTF" destination="iGc-SS-64r" id="u23-xI-fAF"/>
                         <outlet property="phoneNumberTF" destination="XLc-Qk-XsQ" id="aVo-Wx-NyD"/>
                         <outlet property="surnameTF" destination="Pfc-co-zG9" id="MQC-M7-fd1"/>
-                        <segue destination="0f8-vC-LfB" kind="presentation" identifier="openTabBarVC" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="PM2-DL-4n7"/>
+                        <segue destination="0f8-vC-LfB" kind="presentation" identifier="openTabBarVC" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="PM2-DL-4n7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GEd-eF-ZWz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1096,7 +1096,8 @@ ver. 0.1 alpha</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="WI3-dR-lAb"/>
+        <segue reference="v6t-2S-VxP"/>
+        <segue reference="PM2-DL-4n7"/>
         <segue reference="A2j-4V-UV1"/>
     </inferredMetricsTieBreakers>
     <resources>
